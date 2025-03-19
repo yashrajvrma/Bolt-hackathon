@@ -17,7 +17,7 @@ export function Marquee({
 }: MarqueeProps) {
   return (
     <div
-      className={cn("w-full overflow-hidden sm:mt-16 mt-10 z-10", className)}
+      className={cn("w-full overflow-hidden sm:mt-6 mt-6 z-10", className)}
       {...props}
     >
       <div className="relative flex max-w-[90vw] overflow-hidden py-5">

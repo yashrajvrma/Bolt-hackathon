@@ -1,4 +1,5 @@
 import { Marquee } from "../components/ui/marquee";
+import { Dot } from "lucide-react";
 
 const Logos = {
   loops: () => (
@@ -267,9 +268,19 @@ export function ClientSlider() {
   ];
 
   return (
-    <div className="max-w-5xl font-sans mb-20 relative">
+    <div className="max-w-5xl font-sans mb-20 mt-20 relative">
       <div className="flex justify-center items-center">
-        <div className="text-3xl font-bold text-slate-200">Our Sponsors</div>
+        <div className="text-lg font-medium text-slate-400 ">
+          <div className="flex flex-row items-center align-middle gap-x-1">
+            {/* <span>
+              <Dot size={12} strokeWidth={2} />
+            </span> */}
+            Our Sponsors
+            {/* <span>
+              <Dot size={12} strokeWidth={2} />
+            </span> */}
+          </div>
+        </div>
       </div>
 
       {/* Wrapper with fade effect */}

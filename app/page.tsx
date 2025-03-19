@@ -8,13 +8,15 @@ import { ClientSlider } from "./components/clientSlider";
 export default function Home() {
   return (
     <div className="relative flex flex-col items-center w-full h-full bg-black text-white">
-      <Image
-        src="/assets/images/img1.png"
-        alt="Hackathon Background"
-        layout="fill"
-        objectFit="cover"
-        className="z-0 rotate-180"
-      />
+      <div className="absolute inset-0">
+        <Image
+          src="/assets/images/img1.png"
+          alt="Hackathon Background"
+          layout="fill"
+          objectFit="cover"
+          className="z-0 rotate-180 -translate-y-60" // Adjust -translate-y-10 to move up
+        />
+      </div>
       <div className="relative flex flex-col items-center z-10 w-full">
         <Navbar />
         <Hero />
