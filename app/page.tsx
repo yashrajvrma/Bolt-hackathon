@@ -2,6 +2,7 @@ import Image from "next/image";
 import Hero from "./components/heroSection";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import { Faq } from "./components/faqSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <div className="relative flex flex-col items-center z-10 w-full">
         <Navbar />
         <Hero />
+        <Faq />
         <Footer />
       </div>
     </div>
