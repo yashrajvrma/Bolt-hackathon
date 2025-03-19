@@ -3,6 +3,7 @@ import Hero from "./components/heroSection";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import { Faq } from "./components/faqSection";
+import { ClientSlider } from "./components/clientSlider";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <div className="relative flex flex-col items-center z-10 w-full">
         <Navbar />
         <Hero />
+        <ClientSlider />
         <Faq />
         <Footer />
       </div>
