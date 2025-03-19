@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 export default function Hero() {
   return (
     <div className="flex flex-col items-center max-w-4xl font-sans">
-      <Badge className="gap-1 mt-10">
+      <Badge className="gap-1 mt-14">
         <Globe
           className="-ms-0.5 opacity-60"
           size={12}
@@ -19,7 +19,7 @@ export default function Hero() {
           21st March, 2025
         </div>
       </Badge>
-      <div className="text-slate-200 text-center text-8xl font-medium font-sans mt-10 tracking-tight leading-28">
+      <div className="text-slate-200 text-center text-8xl font-medium font-sans mt-10 tracking-tight leading-26">
         The World's Largest Hackathon
       </div>
       <div className="text-slate-500 text-xl text-center font-medium pt-4">

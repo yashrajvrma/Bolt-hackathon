@@ -4,7 +4,7 @@ import { ButtonColorful } from "./ui/buttonColorful";
 
 export default function Navbar() {
   return (
-    <div className="Navbar flex flex-row justify-between py-10 px-12 w-full font-sans">
+    <div className="Navbar max-w-7xl flex flex-row justify-between py-10 w-full font-sans">
       {/* logo */}
       <div className="flex justify-center items-center align-middle hover:cursor-pointer">
         <a href="https://bolt.new/" target="blank">
