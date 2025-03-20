@@ -22,7 +22,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <ClientSlider />
-        <Prize />
+        {/* <Prize /> */}
         <Faq />
         <Footer />
       </div>

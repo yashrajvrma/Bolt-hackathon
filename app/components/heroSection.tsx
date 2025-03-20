@@ -19,10 +19,10 @@ export default function Hero() {
           21st March, 2025
         </div>
       </Badge>
-      <div className="text-slate-200 text-center text-8xl font-medium font-sans mt-10 tracking-tight leading-26">
+      <div className="text-slate-200 text-center sm:text-8xl text-6xl font-medium font-sans mt-10 tracking-tight sm:leading-26 leading-14">
         The World's Largest Hackathon
       </div>
-      <div className="text-slate-500 text-xl text-center font-medium pt-4">
+      <div className="text-slate-500 sm:text-xl text-medium text-center sm:font-medium font-normal pt-4 px-2">
         Join us for the world's biggest virtual hackathon and win over $1m+
         prize!
       </div>

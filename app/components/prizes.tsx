@@ -11,7 +11,7 @@ export default function Prize() {
         </span>
         Prizes
       </div>
-      <div className="w-full min-w-7xl">
+      <div className="w-full sm:min-w-7xl min-w-1xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-20">
           <Card
             title="Grand Prize"

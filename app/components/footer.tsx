@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="flex flex-col items-center w-full font-sans">
+    <div className="flex flex-col items-center w-full font-sans sm:text-lg text-sm">
       <svg width="100%" height="2">
         <defs>
           <linearGradient id="fadeLine" x1="0%" y1="50%" x2="100%" y2="50%">
@@ -12,11 +12,11 @@ export default function Footer() {
         <rect width="100%" height="2" fill="url(#fadeLine)" />
       </svg>
 
-      <div className="flex flex-row justify-between items-center max-w-6xl w-full px-20 py-20 ">
+      <div className="flex flex-row justify-between items-center sm:max-w-6xl max-w-2xl w-full sm:px-20 px-10 py-20 ">
         <div className="hover:cursor-pointer">
           <a href="https://bolt.new/" target="blank">
             <svg
-              className="w-14 h-auto"
+              className="w-12 sm:w-14 h-auto"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 51 21.9"
             >
@@ -59,9 +59,9 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="socials flex flex-row gap-x-6 justify-center">
+        <div className="socials flex flex-row sm:gap-x-6 gap-x-3 justify-center">
           {/* Twitter SVG */}
-          <div className="hover:cursor-pointer w-6 group">
+          <div className="hover:cursor-pointer sm:w-6 w-4 group">
             <a href="https://x.com/boltdotnew" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ export default function Footer() {
           </div>
 
           {/* LinkedIn SVG */}
-          <div className="hover:cursor-pointer w-6 group">
+          <div className="hover:cursor-pointer w-4 sm:w-6 group">
             <a
               href="https://www.linkedin.com/company/stackblitz/"
               target="_blank"
@@ -103,7 +103,7 @@ export default function Footer() {
           </div>
 
           {/* Discord SVG */}
-          <div className="hover:cursor-pointer w-7 group">
+          <div className="hover:cursor-pointer w-5 sm:w-7 group">
             <a href="https://discord.com/invite/stackblitz" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
