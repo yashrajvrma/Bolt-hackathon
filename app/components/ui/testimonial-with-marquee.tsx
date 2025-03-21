@@ -40,7 +40,7 @@ export function TestimonialsSection({
           </p>
         </div>
 
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden md:min-w-7xl min-w-[100px]">
+        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden md:min-w-[1200px] min-w-[100px]">
           <div className="group flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-row [--duration:40s]">
             <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
               {[...Array(4)].map((_, setIndex) =>

@@ -63,6 +63,7 @@ export function TestimonialCard({
         "transition-colors duration-300",
         className
       )}
+      target="blank"
     >
       {/* Glowing Top-Left Border with Border Radius */}
       <div className="absolute top-0 left-0 w-full h-full rounded-full border border-transparent">
