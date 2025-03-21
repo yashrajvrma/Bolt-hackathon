@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Hero from "./components/heroSection";
-import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import { Faq } from "./components/faqSection";
 import { ClientSlider } from "./components/clientSlider";

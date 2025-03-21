@@ -109,12 +109,12 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
     const content = (
       <CardContent>
         {title && (
-          <h3 className="sm:text-3xl text-2xl font-medium mb-2 text-neutral-400">
+          <h3 className="sm:text-3xl text-2xl font-medium mb-2 text-neutral-500">
             {title}
           </h3>
         )}
         {amount && (
-          <p className="sm:text-7xl text-4xl font-medium text-neutral-300 tracking-tighter">
+          <p className="sm:text-7xl text-4xl font-medium text-neutral-400 tracking-tighter">
             {amount}
           </p>
         )}

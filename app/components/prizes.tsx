@@ -3,18 +3,18 @@ import { Plus } from "lucide-react";
 
 export default function Prize() {
   return (
-    <div className="flex flex-col mt-40 bg-black items-center justify-center font-sans mb-44  sm:max-w-5xl">
-      <div className="flex flex-row items-center align-middle sm:text-7xl text-6xl font-medium text-neutral-200 tracking-tight mb-16 ">
-        $1M
-        <span>
-          <Plus
-            className="mr-4 sm:mr-6 w-6 h-6 sm:w-11 sm:h-11"
-            strokeWidth={2}
-          />
-        </span>
-        Prizes
+    <div className="flex flex-col sm:mt-40 mt-20 bg-black items-center justify-center font-sans mb-44  sm:max-w-5xl">
+      <div
+        className="flex flex-row items-center align-middle sm:text-7xl  text-center text-5xl font-semibold tracking-tighter sm:mb-16 mb-10 bg-gradient-to-r text-transparent bg-clip-text"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)",
+        }}
+      >
+        $1M Cash Pool
       </div>
-      <div className="w-full md:min-w-7xl">
+
+      <div className="w-full md:min-w-7xl max-w-[280px] ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-20 gap-y-0">
           <Card
             title="Grand Prize"
