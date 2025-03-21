@@ -69,10 +69,6 @@ const Faq3 = ({
   heading = "Frequently asked Questions",
   description = "Find answers to common questions about our products. Can't find what you're looking for? Contact our support team.",
   items = faqItems,
-  supportHeading = "Need more support?",
-  supportDescription = "Our dedicated support team is here to help you with any questions or concerns. Get in touch with us for personalized assistance.",
-  supportButtonText = "Contact Support",
-  supportButtonUrl = "https://www.shadcnblocks.com",
 }: Faq3Props) => {
   return (
     <section

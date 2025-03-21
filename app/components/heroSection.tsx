@@ -45,13 +45,14 @@ export default function Hero() {
               "linear-gradient(to right, #e4e4e7 70%, #52525b 85%, #18181b 100%)",
           }}
         >
-          The World's Largest Hackathon
+          The World&apos;s Largest Hackathon
         </div>
 
         <div className="text-neutral-400 sm:text-xl text-medium text-center tracking-tight sm:font-medium font-normal pt-4">
-          Join us for the world's biggest virtual hackathon and win over $1m+
-          prize!
+          Join us for the world&apos;s biggest virtual hackathon and win over
+          $1m+ prize!
         </div>
+
         <div className="flex flex-row items-center gap-3 pt-10">
           <Button>
             <a

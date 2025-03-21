@@ -1,5 +1,4 @@
 import { Marquee } from "../components/ui/marquee";
-import { Dot } from "lucide-react";
 
 const Logos = {
   loops: () => (

@@ -1,5 +1,4 @@
 import { Card } from "../components/ui/card";
-import { Plus } from "lucide-react";
 
 export default function Prize() {
   return (

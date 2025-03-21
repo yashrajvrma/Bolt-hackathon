@@ -1,15 +1,14 @@
 "use client";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const router = useRouter();
   const pathName = usePathname(); // Get the current path
   const [isOpen, setIsOpen] = useState(false);
 
-  const scrollToSection = (sectionId: any) => {
+  const scrollToSection = (sectionId: string) => {
     // Check if the user is already on the homepage
     if (pathName === "/") {
       // Scroll to the section
@@ -18,18 +17,31 @@ export default function Navbar() {
         section.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      // Navigate to the homepage with the hash and then scroll to the section
-      // @ts-ignore
-      router.push(`/#${sectionId}`).then(() => {
-        setTimeout(() => {
-          const section = document.getElementById(sectionId);
-          if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 100); // Small delay to ensure the page has loaded
-      });
+      // Navigate to the homepage with the hash
+      router.push(`/#${sectionId}`);
     }
   };
+
+  // Handle scrolling after navigation
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const section = document.getElementById(hash.substring(1));
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    };
+
+    // Listen for hash changes
+    window.addEventListener("hashchange", handleHashChange);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
 
   // Prevent scrolling when the menu is open
   useEffect(() => {
