@@ -1,5 +1,5 @@
 import { Badge } from "../components/ui/badge";
-import { Globe, Trophy, Dot, MoveRight } from "lucide-react";
+import { Globe, Dot } from "lucide-react";
 import { Button } from "./ui/button";
 import Navbar from "./navbar";
 import Image from "next/image";
@@ -20,12 +20,10 @@ export default function Hero() {
           className="z-0 rotate-180"
         />
       </div>
-      {/* <div className="m-0"> */}
       <Navbar />
-      {/* </div> */}
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center max-w-4xl font-sans px-4">
-        <Badge className="gap-1 sm:mt-14 mt-5">
+        <Badge className="gap-1 sm:mt-10 mt-1">
           <Globe
             className="-ms-0.5 opacity-60"
             size={12}
@@ -40,9 +38,16 @@ export default function Hero() {
             May, 2025
           </div>
         </Badge>
-        <div className="text-slate-200 text-center sm:text-8xl text-6xl font-medium font-sans mt-10 tracking-tighter sm:leading-26 leading-14">
+        <div
+          className="text-center sm:text-8xl text-6xl font-medium font-sans mt-10 tracking-tighter sm:leading-26 leading-14 bg-gradient-to-r text-transparent bg-clip-text"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #e4e4e7 70%, #52525b 85%, #18181b 100%)",
+          }}
+        >
           The World's Largest Hackathon
         </div>
+
         <div className="text-neutral-400 sm:text-xl text-medium text-center tracking-tight sm:font-medium font-normal pt-4">
           Join us for the world's biggest virtual hackathon and win over $1m+
           prize!
@@ -60,7 +65,7 @@ export default function Hero() {
             href="https://x.com/boltdotnew/status/1902064573261476001"
             target="blank"
           >
-            <div className="flex flex-row justify-center items-center align-middle text-slate-300 text-medium font-medium border-2 border-neutral-600 hover:bg-neutral-300 hover:cursor-pointer hover:text-neutral-900 rounded-lg px-5 py-2.5 gap-x-2">
+            <div className="flex flex-row justify-center items-center align-middle text-zinc-700 sm:text-lg text-sm font-medium border-1  bg-slate-300 hover:bg-slate-50 hover:text-zinc-900 hover:cursor-pointer sm:rounded-lg rounded-md px-5 py-2">
               Become A Sponsor
             </div>
           </a>
