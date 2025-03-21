@@ -5,7 +5,7 @@ export default function Prize() {
   return (
     <div className="flex flex-col mt-40 bg-black items-center justify-center font-sans mb-44">
       <div className="flex flex-row items-center align-middle text-7xl font-medium text-neutral-200 tracking-tight mb-16 ">
-        $1,000,000
+        $1M
         <span>
           <Plus size={44} strokeWidth={2} className="mr-6" />
         </span>
