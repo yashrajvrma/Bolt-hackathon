@@ -8,7 +8,7 @@ const testimonials = [
       avatar:
         "https://pbs.twimg.com/profile_images/1589756412078555136/YlXMBzhp_400x400.jpg",
     },
-    text: "Indie Hacker and Builder",
+    text: "Digital Nomad, Indie Hacker and Builder",
     href: "https://x.com/levelsio",
   },
   {

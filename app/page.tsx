@@ -10,7 +10,6 @@ import { TestimonialsSectionDemo } from "./components/testimonial-section";
 export default function Home() {
   return (
     <div className=" flex flex-col items-center w-full h-full bg-black text-white">
-      {/* <Navbar /> */}
       <Hero />
       <ClientSlider />
       <Prize />

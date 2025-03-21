@@ -13,11 +13,11 @@ export default function Hero() {
         style={{ pointerEvents: "none" }}
       >
         <Image
-          src="/assets/images/img7.png"
+          src="/assets/images/img1.png"
           alt="Hero Background"
           layout="fill"
           objectFit="cover"
-          className="z-0"
+          className="z-0 rotate-180"
         />
       </div>
       {/* <div className="m-0"> */}
@@ -40,7 +40,7 @@ export default function Hero() {
             May, 2025
           </div>
         </Badge>
-        <div className="text-slate-200 text-center sm:text-8xl text-6xl font-normal font-sans mt-10 tracking-tighter sm:leading-26 leading-14">
+        <div className="text-slate-200 text-center sm:text-8xl text-6xl font-medium font-sans mt-10 tracking-tighter sm:leading-26 leading-14">
           The World's Largest Hackathon
         </div>
         <div className="text-neutral-400 sm:text-xl text-medium text-center tracking-tight sm:font-medium font-normal pt-4">

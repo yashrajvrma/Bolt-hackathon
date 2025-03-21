@@ -50,8 +50,8 @@ export function TestimonialsSection({
             </div>
           </div>
 
-          <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/8 bg-gradient-to-r from-black via-[#0f172a]/50 to-transparent sm:block" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/8 bg-gradient-to-l from-black via-[#0f172a]/50 to-transparent sm:block" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-3/8 bg-gradient-to-r from-black via-[#121413]/50 to-transparent sm:block" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-3/8 bg-gradient-to-l from-black via-[#121413]/50 to-transparent sm:block" />
         </div>
       </div>
     </section>
