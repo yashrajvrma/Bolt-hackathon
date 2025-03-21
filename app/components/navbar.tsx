@@ -88,7 +88,7 @@ export default function Navbar() {
               ></span>
               {/* Bottom bar */}
               <span
-                className={`block w-4.5 h-0.5 bg-current absolute transition-all duration-300 ease-in-out ${
+                className={`block w-4.5 h-0.5  bg-current absolute transition-all duration-300 ease-in-out ${
                   isOpen ? "top-3 -rotate-45" : "top-4"
                 }`}
               ></span>
@@ -102,7 +102,7 @@ export default function Navbar() {
             href="https://form.typeform.com/to/wf94YwH4?typeform-source=t.co"
             target="blank"
           >
-            <div className="flex flex-row justify-center items-center align-middle text-medium font-medium border-2 bg-neutral-200 border-neutral-100 hover:border-neutral-50 hover:cursor-pointer hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 py-2 gap-x-1">
+            <div className="flex flex-row justify-center items-center align-middle text-medium font-medium border-2 bg-neutral-200 border-neutral-100 hover:border-neutral-50 hover:cursor-pointer hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-5 py-2 gap-x-1">
               <span className="text-slate-700">Sign up</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-slate-700" />
             </div>
@@ -111,17 +111,16 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu - Modified to slide from top to bottom, starting below navbar */}
-      <div
+      {/* <div
         className={`fixed left-0 right-0 bottom-0 bg-black z-40 flex flex-col transition-all duration-300 ease-in-out overflow-hidden`}
         style={{
-          top: "100px", // Fixed position right below the navbar
-          height: "calc(100% - 100px)", // Take remaining screen height
+          top: "100px",
+          height: "calc(100% - 100px)",
           transform: isOpen ? "translateY(0)" : "translateY(-100%)",
           opacity: isOpen ? 1 : 0,
           pointerEvents: isOpen ? "auto" : "none",
         }}
       >
-        {/* Menu Items - Left Aligned */}
         <div className="flex flex-col p-8 gap-8 font-sans">
           {navItems.map((item, index) => (
             <a
@@ -142,7 +141,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Sign Up Button - Using your original style */}
         <div className="p-8 mt-auto">
           <a
             href="https://form.typeform.com/to/wf94YwH4?typeform-source=t.co"
@@ -152,6 +150,52 @@ export default function Navbar() {
             <div className="flex flex-row justify-center items-center align-middle font-sans text-medium font-medium border-2 bg-neutral-200 border-neutral-100 hover:border-neutral-50 hover:cursor-pointer hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 py-2 gap-x-1 w-full">
               <span className="text-slate-700">Sign up</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-slate-700" />
+            </div>
+          </a>
+        </div>
+      </div> */}
+      {/* Mobile Menu - Now Fullscreen */}
+      <div
+        className={`fixed inset-0 bg-black z-40 flex flex-col transition-all duration-300 ease-in-out overflow-hidden`}
+        style={{
+          transform: isOpen ? "translateY(0)" : "translateY(-100%)",
+          opacity: isOpen ? 1 : 0,
+          pointerEvents: isOpen ? "auto" : "none",
+        }}
+      >
+        {/* Menu Items - Left Aligned */}
+        <div className="flex flex-col items-center py-8 px-8 gap-7 font-sans mt-24">
+          {navItems.map((item, index) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="text-zinc-300 text-xl font-medium hover:text-zinc-100 transition-colors"
+              onClick={() => setIsOpen(false)}
+              style={{
+                animationDelay: `${index * 100}ms`,
+                opacity: isOpen ? 1 : 0,
+                transform: isOpen ? "translateY(0)" : "translateY(-20px)",
+                transition: "opacity 500ms ease, transform 500ms ease",
+                transitionDelay: `${index * 100}ms`,
+              }}
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+
+        {/* Sign Up Button - Full width */}
+        <div className="p-8 max-w-sm ">
+          <a
+            href="https://form.typeform.com/to/wf94YwH4?typeform-source=t.co"
+            target="_blank"
+            onClick={() => setIsOpen(false)}
+          >
+            <div className="flex flex-row justify-center items-center font-sans sm:text-lg text-md font-medium border-2 bg-neutral-200 border-neutral-100 hover:border-neutral-50 hover:cursor-pointer hover:bg-neutral-50 hover:text-neutral-900 rounded-lg sm:px-6 px-3 py-3 ">
+              <span className="text-slate-700 hover:text-slate-900">
+                Sign up
+              </span>
+              <ArrowUpRight className="w-5 h-5 text-slate-700 " />
             </div>
           </a>
         </div>
