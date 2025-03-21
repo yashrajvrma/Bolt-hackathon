@@ -12,8 +12,9 @@ export default function Footer() {
         <rect width="100%" height="2" fill="url(#fadeLine)" />
       </svg>
 
-      <div className="flex flex-row justify-between items-center sm:max-w-6xl max-w-2xl w-full sm:px-20 px-10 py-20 ">
-        <div className="hover:cursor-pointer">
+      <div className="flex flex-col sm:flex-row justify-between items-center sm:max-w-6xl max-w-2xl w-full sm:px-20 px-10 py-10">
+        {/* Bolt SVG */}
+        <div className="hover:cursor-pointer mb-4 sm:mb-0">
           <a href="https://bolt.new/" target="blank">
             <svg
               className="w-12 sm:w-14 h-auto"
@@ -36,7 +37,9 @@ export default function Footer() {
             </svg>
           </a>
         </div>
-        <div className="flex flex-row gap-x-6 text-slate-400 ">
+
+        {/* Terms, Privacy, Help Center Links */}
+        <div className="flex flex-row gap-x-6 text-slate-400 mb-4 sm:mb-0">
           <div className="hover:text-slate-50">
             <a
               href="https://stackblitz.com/terms-of-service?__hstc=69929231.161fd383b6d21f3af972f83ceafdb2fd.1741158258808.1742371925148.1742384364308.4&__hssc=69929231.1.1742384364308&__hsfp=2731944031"
@@ -59,6 +62,8 @@ export default function Footer() {
             </a>
           </div>
         </div>
+
+        {/* Socials */}
         <div className="socials flex flex-row sm:gap-x-6 gap-x-3 justify-center">
           {/* Twitter SVG */}
           <div className="hover:cursor-pointer sm:w-6 w-4 group">
