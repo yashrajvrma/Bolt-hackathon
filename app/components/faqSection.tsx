@@ -1,7 +1,7 @@
 import { Faq3 } from "../components/ui/faq";
 
 const demoData = {
-  heading: "Frequently asked questions",
+  heading: "Frequently Asked Questions",
   description: "",
   items: [
     {

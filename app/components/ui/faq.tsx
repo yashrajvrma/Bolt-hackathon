@@ -66,7 +66,7 @@ const faqItems = [
 ];
 
 const Faq3 = ({
-  heading = "Frequently asked questions",
+  heading = "Frequently asked Questions",
   description = "Find answers to common questions about our products. Can't find what you're looking for? Contact our support team.",
   items = faqItems,
   supportHeading = "Need more support?",
@@ -75,10 +75,10 @@ const Faq3 = ({
   supportButtonUrl = "https://www.shadcnblocks.com",
 }: Faq3Props) => {
   return (
-    <section className="py-32 font-sans text-slate-200 w-full sm:max-w-3xl max-w-xl">
-      <div className="container space-y-16 mx-auto">
+    <section className="py-32 font-sans text-slate-200 w-full sm:max-w-4xl max-w-xl">
+      <div className="container sm:space-y-16 space-y-10 mx-auto">
         <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center ">
-          <h2 className="sm:text-4xl text-3xl text-center font-semibold md:mb-4 lg:mb-0 lg:text-4xl">
+          <h2 className=" text-3xl text-center font-medium md:mb-4 mb-0 lg:text-5xl">
             {heading}
           </h2>
           <p className="text-muted-foreground lg:text-lg">{description}</p>
