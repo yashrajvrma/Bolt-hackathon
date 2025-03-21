@@ -92,8 +92,8 @@ const testimonials = [
 export function TestimonialsSectionDemo() {
   return (
     <TestimonialsSection
-      title="Trusted by developers worldwide"
-      description="Join thousands of developers who are already building the future with our AI platform"
+      title="Meet our Judges"
+      description="Pitch Your Wildest Idea to the Founders Who've Built It All"
       testimonials={testimonials}
     />
   );
