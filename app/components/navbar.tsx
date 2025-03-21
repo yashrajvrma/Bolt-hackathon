@@ -1,12 +1,37 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const router = useRouter();
+  const pathName = usePathname(); // Get the current path
   const [isOpen, setIsOpen] = useState(false);
 
-  // Prevent scrolling when menu is open
+  const scrollToSection = (sectionId: any) => {
+    // Check if the user is already on the homepage
+    if (pathName === "/") {
+      // Scroll to the section
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Navigate to the homepage with the hash and then scroll to the section
+      // @ts-ignore
+      router.push(`/#${sectionId}`).then(() => {
+        setTimeout(() => {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100); // Small delay to ensure the page has loaded
+      });
+    }
+  };
+
+  // Prevent scrolling when the menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -19,16 +44,15 @@ export default function Navbar() {
   }, [isOpen]);
 
   const navItems = [
-    { label: "Info", href: "#" },
-    { label: "Stages", href: "#" },
-    { label: "Judges", href: "#" },
-    { label: "FAQ", href: "#" },
+    { label: "Prizes", sectionId: "prize" },
+    { label: "Judges", sectionId: "judge" },
+    { label: "FAQ", sectionId: "faq" },
   ];
 
   return (
     <>
       <div className="Navbar sm:max-w-7xl flex flex-row justify-between sm:py-10 py-8 w-full font-sans relative z-50 sm:px-5 px-5">
-        {/* logo */}
+        {/* Logo */}
         <div className="flex justify-center items-center align-middle hover:cursor-pointer">
           <a href="https://bolt.new/" target="blank">
             <svg
@@ -58,7 +82,7 @@ export default function Navbar() {
           {navItems.map((item) => (
             <a
               key={item.label}
-              href={item.href}
+              onClick={() => scrollToSection(item.sectionId)}
               className="hover:cursor-pointer hover:text-neutral-50"
             >
               {item.label}
@@ -110,51 +134,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu - Modified to slide from top to bottom, starting below navbar */}
-      {/* <div
-        className={`fixed left-0 right-0 bottom-0 bg-black z-40 flex flex-col transition-all duration-300 ease-in-out overflow-hidden`}
-        style={{
-          top: "100px",
-          height: "calc(100% - 100px)",
-          transform: isOpen ? "translateY(0)" : "translateY(-100%)",
-          opacity: isOpen ? 1 : 0,
-          pointerEvents: isOpen ? "auto" : "none",
-        }}
-      >
-        <div className="flex flex-col p-8 gap-8 font-sans">
-          {navItems.map((item, index) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="text-white text-xl font-medium hover:text-gray-300 transition-colors"
-              onClick={() => setIsOpen(false)}
-              style={{
-                animationDelay: `${index * 100}ms`,
-                opacity: isOpen ? 1 : 0,
-                transform: isOpen ? "translateY(0)" : "translateY(-20px)",
-                transition: "opacity 500ms ease, transform 500ms ease",
-                transitionDelay: `${index * 100}ms`,
-              }}
-            >
-              {item.label}
-            </a>
-          ))}
-        </div>
-
-        <div className="p-8 mt-auto">
-          <a
-            href="https://form.typeform.com/to/wf94YwH4?typeform-source=t.co"
-            target="blank"
-            onClick={() => setIsOpen(false)}
-          >
-            <div className="flex flex-row justify-center items-center align-middle font-sans text-medium font-medium border-2 bg-neutral-200 border-neutral-100 hover:border-neutral-50 hover:cursor-pointer hover:bg-neutral-50 hover:text-neutral-900 rounded-lg px-3 py-2 gap-x-1 w-full">
-              <span className="text-slate-700">Sign up</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-slate-700" />
-            </div>
-          </a>
-        </div>
-      </div> */}
-      {/* Mobile Menu - Now Fullscreen */}
+      {/* Mobile Menu - Fullscreen */}
       <div
         className={`fixed inset-0 bg-black z-40 flex flex-col transition-all duration-300 ease-in-out overflow-hidden`}
         style={{
@@ -163,14 +143,16 @@ export default function Navbar() {
           pointerEvents: isOpen ? "auto" : "none",
         }}
       >
-        {/* Menu Items - Left Aligned */}
+        {/* Menu Items - Centered */}
         <div className="flex flex-col items-center py-8 px-8 gap-7 font-sans mt-24">
           {navItems.map((item, index) => (
             <a
               key={item.label}
-              href={item.href}
+              onClick={() => {
+                scrollToSection(item.sectionId);
+                setIsOpen(false); // Close the menu after clicking
+              }}
               className="text-zinc-300 text-xl font-medium hover:text-zinc-100 transition-colors"
-              onClick={() => setIsOpen(false)}
               style={{
                 animationDelay: `${index * 100}ms`,
                 opacity: isOpen ? 1 : 0,
@@ -185,17 +167,17 @@ export default function Navbar() {
         </div>
 
         {/* Sign Up Button - Full width */}
-        <div className="p-8 max-w-sm ">
+        <div className="p-8 max-w-sm">
           <a
             href="https://form.typeform.com/to/wf94YwH4?typeform-source=t.co"
             target="_blank"
             onClick={() => setIsOpen(false)}
           >
-            <div className="flex flex-row justify-center items-center font-sans sm:text-lg text-md font-medium border-2 bg-neutral-200 border-neutral-100 hover:border-neutral-50 hover:cursor-pointer hover:bg-neutral-50 hover:text-neutral-900 rounded-lg sm:px-6 px-3 py-3 ">
+            <div className="flex flex-row justify-center items-center font-sans sm:text-lg text-md font-medium border-2 bg-neutral-200 border-neutral-100 hover:border-neutral-50 hover:cursor-pointer hover:bg-neutral-50 hover:text-neutral-900 rounded-lg sm:px-6 px-3 py-3">
               <span className="text-slate-700 hover:text-slate-900">
                 Sign up
               </span>
-              <ArrowUpRight className="w-5 h-5 text-slate-700 " />
+              <ArrowUpRight className="w-5 h-5 text-slate-700" />
             </div>
           </a>
         </div>

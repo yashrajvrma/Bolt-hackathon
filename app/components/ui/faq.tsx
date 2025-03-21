@@ -75,7 +75,10 @@ const Faq3 = ({
   supportButtonUrl = "https://www.shadcnblocks.com",
 }: Faq3Props) => {
   return (
-    <section className="py-32 font-sans text-slate-200 w-full sm:max-w-4xl max-w-xl">
+    <section
+      id="faq"
+      className="py-32 font-sans text-slate-200 w-full sm:max-w-4xl max-w-xl"
+    >
       <div className="container sm:space-y-16 space-y-10 mx-auto">
         <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center ">
           <h2 className=" text-3xl text-center font-medium md:mb-4 mb-0 lg:text-5xl">

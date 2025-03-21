@@ -23,6 +23,7 @@ export function TestimonialsSection({
 }: TestimonialsSectionProps) {
   return (
     <section
+      id="judge"
       className={cn(
         "bg-black text-foreground",
         "py-12 sm:py-24 md:py-32 px-0 sm:max-w-6xl w-full font-sans",

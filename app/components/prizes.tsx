@@ -3,7 +3,10 @@ import { Plus } from "lucide-react";
 
 export default function Prize() {
   return (
-    <div className="flex flex-col sm:mt-40 mt-20 bg-black items-center justify-center font-sans mb-44  sm:max-w-5xl">
+    <div
+      id="prize"
+      className="flex flex-col sm:mt-40 mt-20 bg-black items-center justify-center font-sans mb-44  sm:max-w-5xl"
+    >
       <div
         className="flex flex-row items-center align-middle sm:text-7xl  text-center text-5xl font-semibold tracking-tighter sm:mb-16 mb-10 bg-gradient-to-r text-transparent bg-clip-text"
         style={{
