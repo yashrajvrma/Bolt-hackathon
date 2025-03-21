@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="Navbar sm:max-w-7xl flex flex-row justify-between sm:py-10 py-8 w-full font-sans relative z-50 px-5">
+      <div className="Navbar sm:max-w-7xl flex flex-row justify-between sm:py-10 py-8 w-full font-sans relative z-50 sm:px-5 px-5">
         {/* logo */}
         <div className="flex justify-center items-center align-middle hover:cursor-pointer">
           <a href="https://bolt.new/" target="blank">

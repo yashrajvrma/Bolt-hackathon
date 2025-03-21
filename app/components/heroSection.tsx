@@ -24,15 +24,15 @@ export default function Hero() {
       <Navbar />
       {/* </div> */}
       {/* Hero Content */}
-      <div className="relative z-10 flex flex-col items-center max-w-4xl font-sans">
-        <Badge className="gap-1 mt-14">
+      <div className="relative z-10 flex flex-col items-center max-w-4xl font-sans px-4">
+        <Badge className="gap-1 sm:mt-14 mt-5">
           <Globe
             className="-ms-0.5 opacity-60"
             size={12}
             strokeWidth={2}
             aria-hidden="true"
           />
-          <div className="flex flex-row items-center align-middle pt-0.5">
+          <div className="flex flex-row items-center align-middle pt-0.5 text-xs">
             Virtual
             <span>
               <Dot size={12} strokeWidth={2} />
@@ -40,10 +40,10 @@ export default function Hero() {
             May, 2025
           </div>
         </Badge>
-        <div className="text-slate-200 text-center sm:text-8xl text-6xl font-medium font-sans mt-10 tracking-tighter sm:leading-26 leading-14">
+        <div className="text-slate-200 text-center sm:text-8xl text-6xl font-normal font-sans mt-10 tracking-tighter sm:leading-26 leading-14">
           The World's Largest Hackathon
         </div>
-        <div className="text-neutral-400 sm:text-xl text-medium text-center sm:font-medium font-normal pt-4 px-2">
+        <div className="text-neutral-400 sm:text-xl text-medium text-center tracking-tight sm:font-medium font-normal pt-4">
           Join us for the world's biggest virtual hackathon and win over $1m+
           prize!
         </div>

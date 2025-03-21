@@ -5,6 +5,7 @@ import Footer from "./components/footer";
 import { Faq } from "./components/faqSection";
 import { ClientSlider } from "./components/clientSlider";
 import Prize from "./components/prizes";
+import { TestimonialsSectionDemo } from "./components/testimonial-section";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <ClientSlider />
       <Prize />
+      <TestimonialsSectionDemo />
       <Faq />
       <Footer />
     </div>
